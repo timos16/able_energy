@@ -1,0 +1,365 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  font-family: "NoiGrotesk", sans-serif;
+  font-weight: 400;
+  background-color: #020e2d;
+  color: #000;
+}
+
+h1, p {
+  margin: 0 0 1em 0;
+}
+
+img {
+  border: solid #020e2d;
+}
+
+.mainwrapper {
+  background-color: #fff;
+  max-width: 100%;
+  margin: 0 20px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-rows:auto 1fr auto;
+  grid-template-columns:100%;
+
+  /* viewport-høyde */
+   min-height:100vh;
+
+  /* liten viewport-høyde */
+  min-height:100svh;
+}
+
+.innhold {
+   grid-column: 2 / -1;
+}
+
+/* Alle skjermar */
+
+.header {
+   background-color: #020e2d;
+   }
+
+ .logo {
+    float: left;
+  }
+
+  .logo svg {
+    width: 180px;
+    color: #8355f7;
+  }
+
+  .logo svg:hover {
+    color: #fff;
+  }
+
+  .knapp3 {
+    background-color: blue;
+    color: white;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 32px;
+    padding-left: 32px;
+    font-size: 18px;
+    min-height: 30px;
+    line-height: 18px;
+    display: inline-flex;
+    border-radius: 100px;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+    text-decoration: none solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    border: 0px solid rgb(255, 255, 255);
+  }
+
+  .knapp1:hover, .knapp2:hover, .knapp3:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid white;
+  }
+
+  .tabell {
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .fl-table {
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+  }
+
+  .fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+  } 
+
+  .fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 16px;
+  } 
+
+  .fl-table thead th {
+    color: black;
+    background: #4FC3A1;
+  } 
+  
+
+  .fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+  } 
+
+  .fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+  } 
+
+  /* Responsive */  
+
+  @media (max-width: 767px) {
+      .fl-table {
+          display: block;
+          width: 100%;
+      }
+      .table-wrapper:before{
+          content: "Scroll horizontally >";
+          display: block;
+          text-align: right;
+          font-size: 11px;
+          color: white;
+          padding: 0 0 10px;
+      }
+      .fl-table thead, .fl-table tbody, .fl-table thead th {
+          display: block;
+      }
+      .fl-table thead th:last-child{
+          border-bottom: none;
+      }
+      .fl-table thead {
+          float: left;
+      }
+      .fl-table tbody {
+          width: auto;
+          position: relative;
+          overflow-x: auto;
+      }
+      .fl-table td, .fl-table th {
+          padding: 20px .625em .625em .625em;
+          height: 60px;
+          vertical-align: middle;
+          box-sizing: border-box;
+          overflow-x: hidden;
+          overflow-y: auto;
+          width: 120px;
+          font-size: 13px;
+          text-overflow: ellipsis;
+      }
+      .fl-table thead th {
+          text-align: left;
+          border-bottom: 1px solid #f7f7f9;
+      }
+      .fl-table tbody tr {
+          display: table-cell;
+      }
+      .fl-table tbody tr:nth-child(odd) {
+          background: none;
+      }
+      .fl-table tr:nth-child(even) {
+          background: transparent;
+      }
+      .fl-table tr td:nth-child(odd) {
+          background: #F8F8F8;
+          border-right: 1px solid #E6E4E4;
+      }
+      .fl-table tr td:nth-child(even) {
+          border-right: 1px solid #E6E4E4;
+      }
+      .fl-table tbody td {
+          display: block;
+          text-align: center;
+      }
+  }
+
+  .footer {
+    height: 100px;
+    background-color: #020e2d;
+    color: #fff;
+    grid-column: 1 / -1;
+    clear: both;
+  }
+  
+  .footer a{
+    color: #fff;
+  }
+
+/* Mobilskjerm */
+
+@media screen and (max-width: 749px) {
+.logo {width:100%}
+.logo svg {width: 180px}
+.knapp1, .knapp2 {
+    margin-top: 20px;
+    background-color: #ae977f;
+    color: #000;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 32px;
+    padding-left: 32px;
+    font-size: 14px;
+    min-height: 30px;
+    line-height: 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    text-decoration: none solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    border: 0px solid rgb(255, 255, 255);
+  }
+}
+.logobunn {
+width:180px}
+
+/* Stor skjerm */
+
+@media screen and (min-width: 750px) {
+
+  /* mangler gridsupport? */
+  .sidebar {
+    float: left;
+    width: 20%;
+  }
+
+  .content {
+    float: right;
+    width: 80%;
+    
+    .trans_container{height: auto;min-height: 150px;width: 100%;float: left;}
+    .trans{overflow-x: auto;width: 70%;margin-top: 2%;margin-left: 3%;min-height: 400px;max-height: 95%;float: left;text-align: center;}
+    .trans_info{width: 100%;height: 30px;margin-bottom: 3px;border: #020e2d 2px solid;border-radius: 2px;}
+    .setting{background-color: #ffffff;width: 70%;margin-top: 5%;margin-left: 3%;min-height: 80%;text-align: left;padding-left: 10px;padding-bottom: 10px;}
+    .settings_container{height: auto;min-height: 100%;width: 100%;float: left;}
+    .container{margin-top: 2%;}
+    .con{width: 70%;margin-top: 3%;margin-left: 2%;}
+  }
+
+  .mainwrapper {
+    margin: 0 auto;
+    grid-template-columns: 1fr 4fr;
+  }
+ 
+  .header {
+    height: 145px;
+    background-color: #020e2d;
+    color: #fff;
+    grid-column: 1 / -1;
+    clear: both;
+  }
+
+  .logo {
+    margin-top: 28px;
+    margin-left: 52px
+  }
+
+  .logo svg {
+    color: #8355f7;
+  }
+
+  .logo svg:hover {
+    color: #fff;
+  }
+
+  .logobunn {
+    width: 120px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 30px;
+  }
+
+  .logobunn svg {
+    color: #fff;
+  }
+
+  .knapp1, .knapp2 {
+    background-color: #ae977f;
+    color: #000;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 32px;
+    padding-left: 32px;
+    margin-top: 34px;
+    margin-left: 18px;
+    float: right;
+    font-size: 18px;
+    min-height: 30px;
+    line-height: 18px;
+    display: inline-flex;
+    border-radius: 100px;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+    text-decoration: none solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    border: 0px solid rgb(255, 255, 255);
+  }
+
+  .knapp2 {
+    margin-right: 52px;
+  }
+
+  .footerlenker {
+    font-size: 16px;
+    float: left;
+    padding-left: 120px;
+    margin-top: 18px;
+  }
+  .footerlenker a {
+    color: white;
+  }
+}
+
+.mainwrapper > * {
+  padding: 20px;
+  font-size: 150%;
+  margin-bottom: 10px;
+}
+
+.sidebar {
+  border-right: 1px dotted black;
+}
+
+.sidebar a{
+  color: black;
+  text-decoration: none;
+  }
+
+.sidebar a:hover{
+  color: blue;
+  }
+
+/* Lånt: We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .mainwrapper > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
